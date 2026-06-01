@@ -45,18 +45,53 @@ using namespace std;
 //          * * * * *
 //          * * * * *
 //
+//                       
 //
-int main () {
+//
+// //
+// int main () {
+//
+//   int n = 3 , m = 5;
+//
+//   for (int i = 1; i <= m; i++) {
+//
+//     for (int j = 1; j <= m ; j++) {
+//
+//       std::cout << " * ";
+//     }
+//
+//     cout << std::endl;
+// }
+// }
+//
+//
+// Third-Question:
+// input n = 15
+// output: false
+//
+// input n= 44
+// out = turee
 
-  int n = 3 , m = 5;
-
-  for (int i = 1; i <= n; i++) {
-      
-    for (int j = 1; j <= m ; j++) {
-
-      std::cout << " * ";
-    }
+  bool CheckOddEven(int n) {
+      int rem  = n % 2                                                ;
+    
+      if (rem == 0) {
+        return true;
+      }   else {
+        return false;
+      }
   
-    cout << std::endl;
-}
-}
+  }
+
+  int main () {
+    // std::cin
+
+    int n = []{int i; std::cin >> i; return i;} ();
+
+     if (CheckOddEven(n)) {
+       std::cout << "True";
+     }  else {
+       std::cout << "False";
+     }
+
+  }
