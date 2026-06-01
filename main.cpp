@@ -73,7 +73,7 @@ using namespace std;
 // out = turee
 
   bool CheckOddEven(int n) {
-      int rem  = n % 2                                                ;
+      int rem  = n % 2
     
       if (rem == 0) {
         return true;
