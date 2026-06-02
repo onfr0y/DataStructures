@@ -6,14 +6,14 @@ using namespace std;
 
 //
 //
-// for the question 
+// for the question
 // input: n = 3
 // output 6
 //
 // input : n = 7
 // output 28
 //
-// exp: the sum between  first to n 
+// exp: the sum between  first to n
 //
 // int sum(int n) {
 //   if (n <= 1)
@@ -45,7 +45,7 @@ using namespace std;
 //          * * * * *
 //          * * * * *
 //
-//                       
+//
 //
 //
 // //
@@ -72,26 +72,29 @@ using namespace std;
 // input n= 44
 // out = turee
 
-  bool CheckOddEven(int n) {
-      int rem  = n % 2
-    
-      if (rem == 0) {
-        return true;
-      }   else {
-        return false;
-      }
-  
+bool CheckOddEven(int n) {
+  int rem = n % 2;
+
+  if (rem == 0) {
+    return true;
+  } else {
+    return false;
   }
+}
 
-  int main () {
-    // std::cin
+int main() {
+  std::cout << "Your number: " << std::endl;
+  // std::cin
 
-    int n = []{int i; std::cin >> i; return i;} ();
+  int n = [] {
+    int i;
+    std::cin >> i;
+    return i;
+  }();
 
-     if (CheckOddEven(n)) {
-       std::cout << "True";
-     }  else {
-       std::cout << "False";
-     }
-
+  if (CheckOddEven(n)) {
+    std::cout << "True";
+  } else {
+    std::cout << "False";
   }
+}
