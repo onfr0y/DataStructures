@@ -71,30 +71,65 @@ using namespace std;
 //
 // input n= 44
 // out = turee
+//
+// bool checkoddeven(int n) {
+//   int rem = n % 2;
+//
+//   if (rem == 0) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+//
+// int main() {
+//   std::cout << "your number: " << std::endl;
+//   // std::cin
+//
+//   int n = [] {
+//     int i;
+//     std::cin >> i;
+//     std::cin.ignore();
+//     return i;
+//   }();
+//
+//   if (checkoddeven(n)) {
+//     std::cout << "true";
+//   } else {
+//     std::cout << "false";
+//   }
+// }
+//
+//
+// fourth question:
+// input : 6
+// output: 1
+//         23
+//         456
+//         78910
+//         1112131415
+//         161718192021
+//
 
-bool CheckOddEven(int n) {
-  int rem = n % 2;
-
-  if (rem == 0) {
-    return true;
-  } else {
-    return false;
+void printfloydtriangle(int n) {
+  int i, j, val = 1;
+  for (i = 1; i <= n; i++) {
+    for (j = 1; j <= i; j++) {
+      std::cout << val++;
+    }
+    std::cout << std::endl;
   }
 }
 
 int main() {
-  std::cout << "Your number: " << std::endl;
-  // std::cin
+  std::cout << "what's your favorite number: " << std::endl;
 
   int n = [] {
     int i;
     std::cin >> i;
+    std::cin.ignore();
     return i;
   }();
 
-  if (CheckOddEven(n)) {
-    std::cout << "True";
-  } else {
-    std::cout << "False";
-  }
+  printfloydtriangle(n);
 }
