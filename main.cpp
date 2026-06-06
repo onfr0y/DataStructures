@@ -64,6 +64,42 @@ using namespace std;
 // }
 // }
 //
+// reverse question:
+//
+//
+//
+
+void reversetriangle(int n, int m) {
+  int i, j, val = 1;
+
+  for (i = n; i >= n; i--) {
+    for (j = 1; j <= m; j++) {
+      std::cout << " * ";
+    }
+    cout << endl;
+  }
+}
+
+int main() {
+  std::cout << "please answer the vertilcal number: " << "\n";
+  std::cout << "please answer the horizontal number: " << std::endl;
+  int n = [] {
+    int n;
+    std::cin >> n;
+    std::cin.ignore();
+    return n;
+  }();
+
+  int m = [] {
+    int m;
+    std::cin >> m;
+    std::cin.ignore();
+    return m;
+  }();
+
+  reversetriangle(n, m);
+  return 0;
+}
 //
 // Third-Question:
 // input n = 15
@@ -109,27 +145,27 @@ using namespace std;
 //         78910
 //         1112131415
 //         161718192021
+// //
 //
-
-void printfloydtriangle(int n) {
-  int i, j, val = 1;
-  for (i = 1; i <= n; i++) {
-    for (j = 1; j <= i; j++) {
-      std::cout << val++;
-    }
-    std::cout << std::endl;
-  }
-}
-
-int main() {
-  std::cout << "what's your favorite number: " << std::endl;
-
-  int n = [] {
-    int i;
-    std::cin >> i;
-    std::cin.ignore();
-    return i;
-  }();
-
-  printfloydtriangle(n);
-}
+// void printfloydtriangle(int n) {
+//   int i, j, val = 1;
+//   for (i = 1; i <= n; i++) {
+//     for (j = 1; j <= i; j++) {
+//       std::cout << val++;
+//     }
+//     std::cout << std::endl;
+//   }
+// }
+//
+// int main() {
+//   std::cout << "what's your favorite number: " << std::endl;
+//
+//   int n = [] {
+//     int i;
+//     std::cin >> i;
+//     std::cin.ignore();
+//     return i;
+//   }();
+//
+//   printfloydtriangle(n);
+// }
