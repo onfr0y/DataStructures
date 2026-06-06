@@ -70,13 +70,11 @@ using namespace std;
 //
 
 void reversetriangle(int n, int m) {
-  int i, j, val = 1;
-
-  for (i = n; i >= n; i--) {
-    for (j = 1; j <= m; j++) {
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < m - i; j++) {
       std::cout << " * ";
     }
-    cout << endl;
+    std::cout << std::endl;
   }
 }
 
