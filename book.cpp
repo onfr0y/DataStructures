@@ -20,4 +20,5 @@ int main() {
   std::cin >> r;
   double outputs = 2 * pi * r;
   std::cout << outputs;
+  return 0;
 }
