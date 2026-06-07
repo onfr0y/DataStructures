@@ -70,17 +70,19 @@ using namespace std;
 //
 
 void reversetriangle(int n, int m) {
-  for (int i = 0; i < n; i++) {
+  for (int i = 0; i < n && i < m; i++) {
+    for (int j = 0; j < i; j++) {
+      std::cout << " ";
+    }
     for (int j = 0; j < m - i; j++) {
-      std::cout << " * ";
+      std::cout << "* ";
     }
     std::cout << std::endl;
   }
 }
 
 int main() {
-  std::cout << "please answer the vertilcal number: " << "\n";
-  std::cout << "please answer the horizontal number: " << std::endl;
+  std::cout << "please answer the vertical number: ";
   int n = [] {
     int n;
     std::cin >> n;
@@ -88,6 +90,7 @@ int main() {
     return n;
   }();
 
+  std::cout << "please answer the horizontal number: ";
   int m = [] {
     int m;
     std::cin >> m;
@@ -104,7 +107,7 @@ int main() {
 // output: false
 //
 // input n= 44
-// out = turee
+// output: true
 //
 // bool checkoddeven(int n) {
 //   int rem = n % 2;

@@ -6,17 +6,20 @@ This directory contains C++ implementations and practices for various data struc
 
 * `CMakeLists.txt` - CMake build configuration
 * `main.cpp` - Singly Linked List template implementation and demonstration
+* `book.cpp` - Basic print practice exercise
 
 ## Build Instructions
 
 Using Clang or GCC:
 
 ```bash
-# Compile the main application
+# Compile and run the main application
 clang++ -std=c++20 main.cpp -o main
-
-# Run the practice executable
 ./main
+
+# Compile and run the book application
+clang++ -std=c++20 book.cpp -o book
+./book
 ```
 
 ## Practised Topics
