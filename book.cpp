@@ -14,9 +14,9 @@
 // exercise 4.3
 //
 int main() {
-
   float pi = 3.14;
   double r;
+  std::cout << "input your radius: ";
   std::cin >> r;
   double outputs = 2 * pi * r;
   std::cout << outputs;
