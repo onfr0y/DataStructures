@@ -61,7 +61,30 @@ int main() {
     std::cout << "grade D";
   } else if (grade <= 80) {
     std::cout << "grade C";
+  } else if (grade <= 90) {
+    std::cout << "grade B";
+  } else if (grade <= 100) {
+    std::cout << "grade A";
   } else {
     std::cout << "invalid grade\n";
   }
+
+  std::string modifier = "";
+  int last_digit = grade % 10;
+
+  // Per the instructions, F does not get a modifier.
+  // Also, a perfect 100 ends in 0, which falls into the 8-0 rule for a '+'.
+  if (letter_grade != "F") {
+    if (last_digit >= 1 && last_digit <= 3) {
+      modifier = "-";
+    } else if (last_digit >= 8 || last_digit == 0) {
+      modifier = "+";
+    }
+    // 4-7 requires a blank, so we leave modifier as ""
+  }
+
+  // 3. Print the final result
+  std::cout << "grade: " << letter_grade << modifier << "\n";
+
+  return 0;
 }
