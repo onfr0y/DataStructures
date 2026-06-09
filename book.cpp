@@ -26,22 +26,42 @@
 //
 
 // string
+//
+// int main() {
+//   // declaration
+//   int oldNumber;
+//   int Number;
+//   int NextNumber;
+//
+//   // set the number
+//   oldNumber = 1;
+//   Number = 1;
+//
+//   while (Number < 100) {
+//     NextNumber = Number + oldNumber;
+//     std::cout << Number << std::endl;
+//
+//     oldNumber = Number;
+//     Number = NextNumber;
+//   }
+// }
+//
+//
+//
+// exercise 6-1:
 
 int main() {
-  // declaration
-  int oldNumber;
-  int Number;
-  int NextNumber;
-
-  // set the number
-  oldNumber = 1;
-  Number = 1;
-
-  while (Number < 100) {
-    NextNumber = Number + oldNumber;
-    std::cout << Number << std::endl;
-
-    oldNumber = Number;
-    Number = NextNumber;
+  int grade;
+  std::cout << "Enter your grade (in percent): " << "\n";
+  std::cin >> grade;
+  // statement
+  if (grade <= 60) {
+    std::cout << "grade: F";
+  } else if (grade <= 70) {
+    std::cout << "grade D";
+  } else if (grade <= 80) {
+    std::cout << "grade C";
+  } else {
+    std::cout << "invalid grade\n";
   }
 }
