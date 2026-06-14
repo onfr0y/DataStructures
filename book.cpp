@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stdexcept>
-#include <string.h>
+#include <string>
 
 // exercise 4.1: write the program to print my name:
 //
@@ -54,19 +54,21 @@ int main() {
   int grade;
   std::cout << "Enter your grade (in percent): " << "\n";
   std::cin >> grade;
-  // statement
+
+  std::string letter_grade = "";
   if (grade <= 60) {
-    std::cout << "grade: F";
+    letter_grade = "F";
   } else if (grade <= 70) {
-    std::cout << "grade D";
+    letter_grade = "D";
   } else if (grade <= 80) {
-    std::cout << "grade C";
+    letter_grade = "C";
   } else if (grade <= 90) {
-    std::cout << "grade B";
+    letter_grade = "B";
   } else if (grade <= 100) {
-    std::cout << "grade A";
+    letter_grade = "A";
   } else {
     std::cout << "invalid grade\n";
+    return 0;
   }
 
   std::string modifier = "";
