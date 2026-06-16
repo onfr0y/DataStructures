@@ -1,3 +1,5 @@
+#include <cstdlib>
+#include <ctime>
 #include <iostream>
 #include <stdexcept>
 #include <string>
@@ -49,44 +51,88 @@
 //
 //
 // exercise 6-1:
+//
+// int main() {
+//   int grade;
+//   std::cout << "Enter your grade (in percent): " << "\n";
+//   std::cin >> grade;
+//
+//   std::string letter_grade = "";
+//   if (grade <= 60) {
+//     letter_grade = "F";
+//   } else if (grade <= 70) {
+//     letter_grade = "D";
+//   } else if (grade <= 80) {
+//     letter_grade = "C";
+//   } else if (grade <= 90) {
+//     letter_grade = "B";
+//   } else if (grade <= 100) {
+//     letter_grade = "A";
+//   } else {
+//     std::cout << "invalid grade\n";
+//     return 0;
+//   }
+//
+//   std::string modifier = "";
+//   int last_digit = grade % 10;
+//
+//   // Per the instructions, F does not get a modifier.
+//   // Also, a perfect 100 ends in 0, which falls into the 8-0 rule for a '+'.
+//   if (letter_grade != "F") {
+//     if (last_digit >= 1 && last_digit <= 3) {
+//       modifier = "-";
+//     } else if (last_digit >= 8 || last_digit == 0) {
+//       modifier = "+";
+//     }
+//     // 4-7 requires a blank, so we leave modifier as ""
+//   }
+//
+//   // 3. Print the final result
+//   std::cout << "grade: " << letter_grade << modifier << "\n";
+//
+//   return 0;
+// }
+//
+// example 7-3 guess/good const_cast<
+//
+
+int number_to_guess;
+int low_limit;
+int high_limit;
+int guess_count;
+int player_number;
+char line[80];
 
 int main() {
-  int grade;
-  std::cout << "Enter your grade (in percent): " << "\n";
-  std::cin >> grade;
+  std::srand(std::time(nullptr));
 
-  std::string letter_grade = "";
-  if (grade <= 60) {
-    letter_grade = "F";
-  } else if (grade <= 70) {
-    letter_grade = "D";
-  } else if (grade <= 80) {
-    letter_grade = "C";
-  } else if (grade <= 90) {
-    letter_grade = "B";
-  } else if (grade <= 100) {
-    letter_grade = "A";
-  } else {
-    std::cout << "invalid grade\n";
-    return 0;
-  }
+  while (1) {
+    number_to_guess = std::rand() % 100 + 1;
 
-  std::string modifier = "";
-  int last_digit = grade % 10;
+    // initialise variables for loop
+    low_limit = 0;
+    high_limit = 100;
+    guess_count = 0;
 
-  // Per the instructions, F does not get a modifier.
-  // Also, a perfect 100 ends in 0, which falls into the 8-0 rule for a '+'.
-  if (letter_grade != "F") {
-    if (last_digit >= 1 && last_digit <= 3) {
-      modifier = "-";
-    } else if (last_digit >= 8 || last_digit == 0) {
-      modifier = "+";
+    while (1) {
+      std::cout << "Bounds " << low_limit << " - " << high_limit << std::endl;
+      std::cout << "Value[" << guess_count << "] ? ";
+
+      ++guess_count;
+
+      std::cin >> player_number;
+
+      // did he guess right?
+      if (player_number == number_to_guess)
+        break;
+
+      if (player_number < number_to_guess)
+        low_limit = player_number;
+      else
+        high_limit = player_number;
     }
-    // 4-7 requires a blank, so we leave modifier as ""
+    std::cout << "Bingo\n";
   }
 
-  // 3. Print the final result
-  std::cout << "grade: " << letter_grade << modifier << "\n";
-
-  return 0;
+  return (0);
 }
