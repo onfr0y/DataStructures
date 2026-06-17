@@ -67,40 +67,40 @@ using namespace std;
 // reverse question:
 //
 //
+// //
 //
-
-void reversetriangle(int n, int m) {
-  for (int i = 0; i < n && i < m; i++) {
-    for (int j = 0; j < i; j++) {
-      std::cout << " ";
-    }
-    for (int j = 0; j < m - i; j++) {
-      std::cout << "* ";
-    }
-    std::cout << std::endl;
-  }
-}
-
-int main() {
-  std::cout << "please answer the vertical number: ";
-  int n = [] {
-    int n;
-    std::cin >> n;
-    std::cin.ignore();
-    return n;
-  }();
-
-  std::cout << "please answer the horizontal number: ";
-  int m = [] {
-    int m;
-    std::cin >> m;
-    std::cin.ignore();
-    return m;
-  }();
-
-  reversetriangle(n, m);
-  return 0;
-}
+// void reversetriangle(int n, int m) {
+//   for (int i = 0; i < n && i < m; i++) {
+//     for (int j = 0; j < i; j++) {
+//       std::cout << " ";
+//     }
+//     for (int j = 0; j < m - i; j++) {
+//       std::cout << "* ";
+//     }
+//     std::cout << std::endl;
+//   }
+// }
+//
+// int main() {
+//   std::cout << "please answer the vertical number: ";
+//   int n = [] {
+//     int n;
+//     std::cin >> n;
+//     std::cin.ignore();
+//     return n;
+//   }();
+//
+//   std::cout << "please answer the horizontal number: ";
+//   int m = [] {
+//     int m;
+//     std::cin >> m;
+//     std::cin.ignore();
+//     return m;
+//   }();
+//
+//   reversetriangle(n, m);
+//   return 0;
+// }
 //
 // Third-Question:
 // input n = 15
@@ -170,3 +170,50 @@ int main() {
 //
 //   printfloydtriangle(n);
 // }
+//
+// exercise 4.1: write the program to print my name:
+//
+// int main() {
+//
+//   std::cout << "Kittisak Porkha\n";
+//   std::cout << "1342341234234123" << std::endl;
+//   std::cout << "01 August 2008";
+// }
+//
+
+// exercise 4.3
+// //
+// int main() {
+//
+//   float pi = 3.14;
+//   double r;
+//   std::cin >> r;
+//   double outputs = 2 * pi * r;
+//   std::cout << outputs;
+//   return 0;
+// }
+//
+//
+//
+//
+//
+// exercise 10.1 implicit type conversion
+//
+// int main() {
+//   int n{3};
+//   float f{};
+//   std::memcpy(&f, &n, sizeof(float));
+//   std::cout << f << std::endl;
+// }
+// 10.3 -- numberic conversion
+//
+//
+int main() {
+  int n{5};
+  long l = n;
+
+  short s{5};
+  double d = s;
+
+  return 0;
+}
