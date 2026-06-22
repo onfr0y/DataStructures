@@ -93,46 +93,58 @@
 //   return 0;
 // }
 //
-// example 7-3 guess/good const_cast<
+// // example 7-3 guess/good const_cast<
+// //
+//
+// int number_to_guess;
+// int low_limit;
+// int high_limit;
+// int guess_count;
+// int player_number;
+// char line[80];
+//
+// int main() {
+//   std::srand(std::time(nullptr));
+//
+//   while (1) {
+//     number_to_guess = std::rand() % 100 + 1;
+//
+//     // initialise variables for loop
+//     low_limit = 0;
+//     high_limit = 100;
+//     guess_count = 0;
+//
+//     while (1) {
+//       std::cout << "Bounds " << low_limit << " - " << high_limit <<
+//       std::endl; std::cout << "Value[" << guess_count << "] ? ";
+//
+//       ++guess_count;
+//
+//       std::cin >> player_number;
+//
+//       // did he guess right?
+//       if (player_number == number_to_guess)
+//         break;
+//
+//       if (player_number < number_to_guess)
+//         low_limit = player_number;
+//       else
+//         high_limit = player_number;
+//     }
+//     std::cout << "Bingo\n";
+//   }
+//
+//   return (0);
+// }
+//
 //
 
-int number_to_guess;
-int low_limit;
-int high_limit;
-int guess_count;
-int player_number;
-char line[80];
+void someFcn(int i) {}
 
 int main() {
-  std::srand(std::time(nullptr));
+  double d(5.0);
+  someFcn(d);
+  someFCn(static_cast<int>(d));
 
-  while (1) {
-    number_to_guess = std::rand() % 100 + 1;
-
-    // initialise variables for loop
-    low_limit = 0;
-    high_limit = 100;
-    guess_count = 0;
-
-    while (1) {
-      std::cout << "Bounds " << low_limit << " - " << high_limit << std::endl;
-      std::cout << "Value[" << guess_count << "] ? ";
-
-      ++guess_count;
-
-      std::cin >> player_number;
-
-      // did he guess right?
-      if (player_number == number_to_guess)
-        break;
-
-      if (player_number < number_to_guess)
-        low_limit = player_number;
-      else
-        high_limit = player_number;
-    }
-    std::cout << "Bingo\n";
-  }
-
-  return (0);
+  return 0;
 }
